@@ -1,4 +1,4 @@
-import yfinance as yt
+import yfinance as yf
 import streamlit as st
 import pandas as pd
 
@@ -7,7 +7,7 @@ st.write("""
 """)
 
 tickerSymbol = 'GOOGL'
-tickerData = yt.Ticker(tickerSymbol)
+tickerData = yf.Ticker(tickerSymbol)
 tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
 # Open	High	Low	Close	Volume	Dividends	Stock Splits
 
